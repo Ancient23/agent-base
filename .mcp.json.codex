@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "codex": {
+      "command": "codex",
+      "args": ["mcp"],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      }
+    }
+  },
+  "globalShortcut": "cmd+k"
+}
