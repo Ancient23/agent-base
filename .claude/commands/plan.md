@@ -6,7 +6,7 @@ argument-hint: [user prompt] [--research <filenames>]
 
 # Plan
 
-Create a detailed implementation plan based on the user's requirements provided through the `USER_PROMPT` variable. Analyze the request, read the provided `RESEARCH_FILES`, think through the implementation approach, and save a comprehensive specification document to `PLAN_OUT_DIRECTORY/<name-of-plan>.md` that can be used as a blueprint for actual development work.
+Create a detailed phased implementation plan based on the user's requirements provided through the `USER_PROMPT` variable. Analyze the request, read the provided `RESEARCH_FILES`, think through the implementation approach, and save a comprehensive specification document to `PLAN_OUT_DIRECTORY/<name-of-plan>.md` that can be used as a blueprint for actual development work. Split the plan up into phases that can be implemented as distinct PRs.
 
 ## Variables 
 
@@ -19,7 +19,7 @@ PLAN_OUTPUT_DIRECTORY: `/docs/plans/`
 - Carefully analyze the user's requirements provided in the USER_PROMPT variable
 - Read all provided research files in the RESEARCH_FILES variable
 - Think deeply about the best approach to implement the requested functionality or solve the problem
-- Create a concise implementation plan that includes:
+- Create a concise phased implementation plan (each phase could be a standalone PR) that includes:
     - Clear problem statement and objectives
     - Technical approach and architecture decisions
     - Step-by-step implementation guide
