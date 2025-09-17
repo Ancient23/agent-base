@@ -1,0 +1,60 @@
+---
+allowed-tools: Read, Write, Edit, Glob, Grep, MultiEdit
+description:  Creates a concise engineering implementation plan based on user requirements reading previously created reasearch files and saves it to plans directory.
+argument-hint: [user prompt] [--research <filenames>] 
+---
+
+# Plan
+
+Create a detailed implementation plan based on the user's requirements provided through the `USER_PROMPT` variable. Analyze the request, read the provided `RESEARCH_FILES`, think through the implementation approach, and save a comprehensive specification document to `PLAN_OUT_DIRECTORY/<name-of-plan>.md` that can be used as a blueprint for actual development work.
+
+## Variables 
+
+USER_PROMPT: $1
+RESEARCH_FILES: $2
+PLAN_OUTPUT_DIRECTORY: `/docs/plans/`
+
+## Instructions
+
+- Carefully analyze the user's requirements provided in the USER_PROMPT variable
+- Read all provided research files in the RESEARCH_FILES variable
+- Think deeply about the best approach to implement the requested functionality or solve the problem
+- Create a concise implementation plan that includes:
+    - Clear problem statement and objectives
+    - Technical approach and architecture decisions
+    - Step-by-step implementation guide
+    - Potential challenges and solutions
+    - Testing strategy
+    - Success criteria
+- Generate a descriptive, kebab-case filename based on the main topic of the plan
+- Save the complete implementation plan to `PLAN_OUTPUT_DIRECTORY/<descriptive-name>.md`
+- Ensure the plan is detailed enough that another developer could follow it to implement the solution
+- Include code examples or pseudo-code where appropriate to clarify complex concepts
+- Consider edge cases, error handling, and scalabilty concerns
+- Structure the document with clear sections and proper markdown formatting
+
+## Workflow
+
+- If no `RESEARCH_FILES` are provided, STOP immediately and ask the user to provide it.
+
+1. Analyze Requirements - THINK HARD and parse the USER_PROMPT and RESEARCH_FILES to understand the core problem
+2. Design solution - Develop technical approach including architecture decisions and implementation strategy
+3. Document Plan - Structure a comprehensive markdown document with problem statement, implementation steps, and testing approach
+4. Generate filename - Create a descriptive kebab-case filename based on the plan's main topic
+5. Save & Report - Write plan to `PLAN_OUTPUT_DIRECTORY/<filename>.md` and provide summary of key components
+
+## Report 
+
+After creating and saving the implementation plan, provide a concise report with the following format: 
+
+```
+Implementation Plan Created
+
+File: PLAN_OUTPUT_DIRECTORY/<descriptive-name>.md
+Topic: <Brief description of what the plan covers>
+Research Files Read: <List of research files read>
+Key components: 
+- <main component 1>
+- <main component 2>
+- <main component 3>
+```
