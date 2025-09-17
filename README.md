@@ -62,6 +62,7 @@ MCP Servers on-demand to reduce context size. Run these when launching claude to
 
 - **Upstash Context7**: Long-term memory via `.mcp.json.context7`
 - **Playwright**: Browser automation via `.mcp.json.playwright`
+- **Codex**: AI code generation via `.mcp.json.codex`
 - Additional MCP servers can be configured for extended tool access
 
 ### Best Practices
