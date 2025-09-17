@@ -13,6 +13,10 @@ Prompts and utilities for agentic coding environments. This is a template reposi
 3. **Documentation** (`docs/`) - Structured knowledge capture and reference materials
 4. **MCP Integration** - Model Context Protocol servers for extended capabilities, not active by default to preserve context
 
+### Environment Variables
+1. OPENAI_API_KEY - (Optional - Can also launch codex seperatly first and login) Set this as environment variable to use Codex with a specific API_KEY. 
+2. CONTEXT7_API_KEY - (Optional) Context7 works without this but it works better if you have an API Key
+
 ### Workflow
 Create PRD/Specs -> Gather reference URLs -> generate research docs for features -> generate implementation/test plans from research -> Implement/Test -> Document
 
