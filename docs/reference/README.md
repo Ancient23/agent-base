@@ -14,3 +14,4 @@ Prompt Caching cookbook -> https://github.com/anthropics/claude-cookbooks/blob/m
 Claude Cookbooks -> https://github.com/anthropics/claude-cookbooks/tree/main
 Anthropic Streaming Responses -> https://github.com/anthropics/courses/blob/master/anthropic_api_fundamentals/05_Streaming.ipynb
 Anthropic AWS -> https://github.com/aws-samples/anthropic-on-aws
+Claude Code vs OpenAI Codex -> https://composio.dev/blog/claude-code-vs-openai-codex
