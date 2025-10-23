@@ -1,13 +1,15 @@
 {
-    "mcpServers": {
-        "playwright": {
-            "type": "stdio",
-            "command": "npx",
-            "args": [
-                "-y",
-                "@playwright/mcp@latest"
-            ],
-            "env": {}
-        }
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--isolated",
+        "--headless",
+        "--viewport-size",
+        "1920,1080"
+      ],
+      "env": {}
     }
+  }
 }
